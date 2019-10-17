@@ -1,13 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang='en' xml:lang="en">
     <head>
         <title>Tax form</title>
+        <link rel="stylesheet" href="CSS/styling.css">
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <form action="http://folk.ntnu.no/michaedm/norwegian-tax-administration/receive.php" method="post">
-
+        <form action="http://folk.ntnu.no/michaedm/norwegian-tax-administration/receive.php" method="post" class = 'form'>
+        <h2>Tax Form</h2>    
+        <div id='desc'>Real name:</div>
+            <input type='text' name='realname' required placeholder="Enter Name"  oninvalid="this.setCustomValidity('Enter Name Here')"
+             oninput="this.setCustomValidity('')">
+        <div id="gender">
+            <div id='desc'>Gender:</div>
+            <input id='rad' type='radio' name='gender' value='male' required
+            oninvalid="this.setCustomValidity('Please Select An Option')"
+            oninput="this.setCustomValidity('')">
+                <label for='rad'>Male</label>
+            <input id='rad' type='radio' name='gender' value='female' required>
+                <label for='rad'>Female</label>
+        </div>
+        <div id='desc'>Email:</div>
+            <input type='email' name='email' required placeholder="email@email.com"  oninvalid="this.setCustomValidity('Email Address Not valid')"
+             oninput="this.setCustomValidity('')">
+        <div id='desc'>Birthdate:</div>
+            <input type='date' name='date' max="1988-12-31" required>
+        <div id='desc'>Hero name:</div>
+            <input type='text' name='heroname' required placeholder="Enter Hero Name"  oninvalid="this.setCustomValidity('Enter Hero Name Here')"
+             oninput="this.setCustomValidity('')">
+        <div id="spandex">
+            <div id='desc'>Do you wear spandex?</div>
+            <input id='rad' type='radio' name='spandex' value='yes' required oninvalid="this.setCustomValidity('Vital information, please answer')"
+            oninput="this.setCustomValidity('')">
+                <label for='rad'>Yes</label>
+            <input id='rad' type='radio' name='spandex' value='no' required>
+                <label for='rad'>No</label>
+        </div>
+        <div class='powers'>
+            <h4 id="hp">Powers [1 - 10]</h4>
+            <div id='desc'>Strength:</div>
+                <select class='sel' name='strength' required>
+                    <option id="dis" disabled selected value></option>
+                    <option value='1'>1</option>
+                    <option value='2'>2</option>   
+                    <option value='3'>3</option>   
+                    <option value='4'>4</option>   
+                    <option value='5'>5</option>   
+                    <option value='6'>6</option>   
+                    <option value='7'>7</option>   
+                    <option value='8'>8</option>   
+                    <option value='9'>9</option>  
+                    <option value='10'>10</option>
+                </select>
+            <div id='desc'>Speed:</div>
+                <select class='sel' name='speed' required>
+                    <option id="dis" disabled selected value></option>
+                    <option value='1'>1</option>
+                    <option value='2'>2</option>   
+                    <option value='3'>3</option>   
+                    <option value='4'>4</option>   
+                    <option value='5'>5</option>   
+                    <option value='6'>6</option>   
+                    <option value='7'>7</option>   
+                    <option value='8'>8</option>   
+                    <option value='9'>9</option>  
+                    <option value='10'>10</option>
+                </select>
+            <div id='desc'>Intelligence:</div>
+                <select class='sel' name='intelligence' required>
+                    <option id="dis" disabled selected value></option>
+                    <option value='1'>1</option>
+                    <option value='2'>2</option>   
+                    <option value='3'>3</option>   
+                    <option value='4'>4</option>   
+                    <option value='5'>5</option>   
+                    <option value='6'>6</option>   
+                    <option value='7'>7</option>   
+                    <option value='8'>8</option>   
+                    <option value='9'>9</option>  
+                    <option value='10'>10</option>
+                </select>
+        </div>
+        <input class='sub' type='submit' value="Submit Tax Form">
         </form>
     </body>
 </html>

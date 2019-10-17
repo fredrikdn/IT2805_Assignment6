@@ -1,0 +1,142 @@
+body {
+    background-color: f2f2f2;
+    font-family: sans-serif; 
+}
+
+
+h2 {
+    font-weight: 300%;
+    display: block;
+    padding: 2%;
+    border-bottom: 2px solid dimgrey;
+}
+
+.powers  {
+    position: relative;
+}
+
+.powers #desc {
+    margin-left: 1%;
+    position: relative;
+}
+
+
+.form {
+    border-style: solid;
+    border-color:dimgrey;
+    border-radius: 4px;
+    padding: 2.5%;
+    background: #e7e7e7;
+    margin: 5%;
+    display: block;
+    
+}
+
+input {
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid darkgrey;
+    border-radius: 4px;
+    margin-bottom: 2%;
+    background-color: #ffffff;
+}
+
+input:focus, input:hover  {
+    border-color: dimgray;
+    box-shadow: inset 0px 0px 4px #a7a7a7;
+}
+
+input[type=text], input[type=email] {
+    padding: 1%;
+    width: 300px;
+    margin-top:1%;   
+}
+
+input[type=text]:invalid, input[type=email]:invalid, input[type=date]:invalid {
+    border-left-color: crimson;
+}
+
+input[type=text]:valid, input[type=email]:valid, input[type=date]:valid {
+    border-left-color: #b3ff66;
+}
+
+input[type=date] {
+    padding: 0.5%;
+    margin-top: 1%;
+}
+
+.sel {
+    display: block;
+    width: 5%;
+    max-width: 5%;
+    border: 2px solid darkgrey;
+    border-radius: 4px;
+    margin: 1% 0 2% 1%;
+    box-sizing: border-box; 
+}
+
+.sel:hover{
+    border-color: dimgray;
+}
+
+.sel:focus{
+    border-color: dimgray;
+}
+
+.sel:invalid {
+    border-left-color: crimson;
+}
+
+
+#desc {
+    display: block;
+    position: relative;
+}
+
+#rad {
+    display: inline;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+
+
+.sub {
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    background-color: #f9f9f9;
+    border: 2px solid darkgrey;
+    border-radius: 4px;
+    margin: 4% 0 2% 0;
+    box-sizing: border-box;
+    padding: 1% 2% 1% 2%;
+    box-shadow: 1px 1px 1px 1px #a7a7a7;
+}
+
+.sub:focus {
+    background-color: #e7e7e7;
+}
+
+.sub:hover {
+    background-color: #f9f9f9;
+}
+
+.sub:active {
+    box-shadow: inset 0px 0px 10px #a7a7a7;
+}
+
+form:invalid [type=submit] {
+  border-left-color: crimson;
+}
+
+form:valid [type=submit] {
+  border-left-color: #b3ff66;
+}
+
+#dis {
+    display: none;
+    
+}
+
+
