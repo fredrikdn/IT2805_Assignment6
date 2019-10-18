@@ -1,11 +1,11 @@
 body {
-    background-color: f2f2f2;
-    font-family: sans-serif; 
+    background-color: #f2f2f2;
+    font-family: sans-serif;
 }
 
 
 h2 {
-    font-weight: 300%;
+    font-weight: bold;
     display: block;
     padding: 2%;
     border-bottom: 2px solid dimgrey;
@@ -16,10 +16,10 @@ h2 {
 }
 
 .powers select {
-    width: 100%;
+    width: 40px;
 }
 
-.powers #desc {
+.powers .desc {
     margin-left: 1%;
     position: relative;
 }
@@ -34,7 +34,7 @@ h2 {
     position: relative;
 }
 
-.tax #desc {
+.tax .desc {
     margin-bottom: 1%;
     position: relative;
     font-weight: bold;
@@ -54,7 +54,23 @@ h2 {
     background: #e7e7e7;
     margin: 5%;
     display: block;
-    
+    position: relative;
+
+}
+
+.information {
+    position: absolute;
+    border-style: solid;
+    border-color: dimgrey;
+    border-radius: 4px;
+    width: 40%;
+    height: 600px;
+    left: 45%;
+    padding: 1%;
+    margin-top: 2.5%;
+    margin-left: 5%;
+    background-color: #ffffff;
+
 }
 
 input {
@@ -66,29 +82,39 @@ input {
     background-color: #ffffff;
 }
 
-input:focus, input:hover  {
+input:focus,
+input:hover {
     border-color: dimgray;
     box-shadow: inset 0px 0px 4px #a7a7a7;
 }
 
-input[type=text], input[type=email] {
+input[type=text],
+input[type=email] {
     padding: 1%;
-    width: 300px;
-    margin-top:1%;   
+    width: 40%;
+    margin-top: 1%;
 }
 
-input[type=text]:invalid, input[type=email]:invalid, input[type=date]:invalid, input[type=number]:invalid, select:invalid{
+input[type=text]:invalid,
+input[type=email]:invalid,
+input[type=date]:invalid,
+input[type=number]:invalid,
+select:invalid {
     border-left-color: crimson;
 }
 
-input[type=text]:valid, input[type=email]:valid, input[type=date]:valid, input[type=number]:valid, select:valid {
+input[type=text]:valid,
+input[type=email]:valid,
+input[type=date]:valid,
+input[type=number]:valid,
+select:valid {
     border-left-color: #b3ff66;
 }
 
 input[type=date] {
     padding: 0.5%;
     margin-top: 1%;
-    width: 300px;
+    width: 40%;
 }
 
 .sel {
@@ -98,14 +124,14 @@ input[type=date] {
     border: 2px solid darkgrey;
     border-radius: 4px;
     margin: 1% 0 2% 1%;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
-.sel:hover{
+.sel:hover {
     border-color: dimgray;
 }
 
-.sel:focus{
+.sel:focus {
     border-color: dimgray;
 }
 
@@ -113,16 +139,16 @@ input[type=date] {
     border-left-color: crimson;
 }
 
-.radi #desc {
+.radi .desc {
     margin-bottom: 1%;
 }
 
-#desc {
+.desc {
     display: block;
     position: relative;
 }
 
-#rad {
+.rad {
     display: inline;
     padding: 1%;
 }
@@ -155,16 +181,18 @@ input[type=date] {
 }
 
 form:invalid [type=submit] {
-  border-left-color: crimson;
+    border-left-color: crimson;
 }
 
 form:valid [type=submit] {
-  border-left-color: #b3ff66;
+    border-left-color: #b3ff66;
 }
 
-#dis {
+.dis {
     display: none;
-    
 }
 
-
+.footer {
+    border-top: 2px solid dimgrey;
+    text-align: center;
+}

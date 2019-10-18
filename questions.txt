@@ -1,0 +1,9 @@
+1. This is because of binary floating point math. JavaScript uses 64-bit floating point representation. Because of this, rational numbers can't be exactly represented.
+
+2. It tells the browser how to send form data to a web server. 
+
+3. GET is an one of the implemented HTTP-methods, and is used to request data from a specified source. The GET method will send the query string to the URL, and should never be used when dealing with sensitive information, as this will be displayed in the URL. 
+
+4. This is because you must allways validate data submitted to the server. This is because impure data can be posted, as the required field can be manipulated. 
+
+5. The textarea tag defines a multi-line input control, and can hold an unlimited number of characters. The input tag is used for single fields, such as names, addresses, etc. 
