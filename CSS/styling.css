@@ -11,8 +11,12 @@ h2 {
     border-bottom: 2px solid dimgrey;
 }
 
-.powers  {
+.powers {
     position: relative;
+}
+
+.powers select {
+    width: 100%;
 }
 
 .powers #desc {
@@ -20,10 +24,31 @@ h2 {
     position: relative;
 }
 
+.tax {
+    position: relative;
+}
+
+.tax label {
+    margin-left: 1%;
+    margin-bottom: 1%;
+    position: relative;
+}
+
+.tax #desc {
+    margin-bottom: 1%;
+    position: relative;
+    font-weight: bold;
+}
+
+.tax input {
+    padding: 1%;
+    margin-top: 1%;
+}
+
 
 .form {
     border-style: solid;
-    border-color:dimgrey;
+    border-color: dimgrey;
     border-radius: 4px;
     padding: 2.5%;
     background: #e7e7e7;
@@ -52,17 +77,18 @@ input[type=text], input[type=email] {
     margin-top:1%;   
 }
 
-input[type=text]:invalid, input[type=email]:invalid, input[type=date]:invalid {
+input[type=text]:invalid, input[type=email]:invalid, input[type=date]:invalid, input[type=number]:invalid, select:invalid{
     border-left-color: crimson;
 }
 
-input[type=text]:valid, input[type=email]:valid, input[type=date]:valid {
+input[type=text]:valid, input[type=email]:valid, input[type=date]:valid, input[type=number]:valid, select:valid {
     border-left-color: #b3ff66;
 }
 
 input[type=date] {
     padding: 0.5%;
     margin-top: 1%;
+    width: 300px;
 }
 
 .sel {
@@ -87,6 +113,9 @@ input[type=date] {
     border-left-color: crimson;
 }
 
+.radi #desc {
+    margin-bottom: 1%;
+}
 
 #desc {
     display: block;
@@ -95,8 +124,7 @@ input[type=date] {
 
 #rad {
     display: inline;
-    margin-top: 1%;
-    margin-bottom: 2%;
+    padding: 1%;
 }
 
 

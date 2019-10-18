@@ -3,86 +3,103 @@
     <head>
         <title>Tax form</title>
         <link rel="stylesheet" href="CSS/styling.css">
+        <script src="script.js"></script>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <form action="http://folk.ntnu.no/michaedm/norwegian-tax-administration/receive.php" method="post" class = 'form'>
+        <form action="http://folk.ntnu.no/michaedm/norwegian-tax-administration/receive.php" name="form" method="post" class = 'form'>
         <h2>Tax Form</h2>    
         <div id='desc'>Real name:</div>
-            <input type='text' name='realname' required placeholder="Enter Name"  oninvalid="this.setCustomValidity('Enter Name Here')"
+            <input type='text' name='realname' required placeholder="Enter Name"  oninvalid="this.setCustomValidity('Please Enter Your Name')"
              oninput="this.setCustomValidity('')">
-        <div id="gender">
+        
+        <div class="radi" id="gender">
             <div id='desc'>Gender:</div>
-            <input id='rad' type='radio' name='gender' value='male' required
-            oninvalid="this.setCustomValidity('Please Select An Option')"
-            oninput="this.setCustomValidity('')">
-                <label for='rad'>Male</label>
-            <input id='rad' type='radio' name='gender' value='female' required>
-                <label for='rad'>Female</label>
+            <label><input id='rad' type='radio' name='gender' value='male' required
+            oninvalid="this.setCustomValidity('Please Select An Option')" oninput="this.setCustomValidity('')">Male</label>
+            <label><input id='rad' type='radio' name='gender' value='female'>Female</label>
         </div>
+            
         <div id='desc'>Email:</div>
-            <input type='email' name='email' required placeholder="email@email.com"  oninvalid="this.setCustomValidity('Email Address Not valid')"
+            <input type='email' name='email' required placeholder="email@email.com"  oninvalid="this.setCustomValidity('Email Address Not Valid')"
              oninput="this.setCustomValidity('')">
+        
         <div id='desc'>Birthdate:</div>
             <input type='date' name='date' max="1988-12-31" required>
+        
         <div id='desc'>Hero name:</div>
-            <input type='text' name='heroname' required placeholder="Enter Hero Name"  oninvalid="this.setCustomValidity('Enter Hero Name Here')"
+            <input type='text' name='heroname' required placeholder="Please Enter Your Hero Name"  oninvalid="this.setCustomValidity('Enter Hero Name Here')"
              oninput="this.setCustomValidity('')">
-        <div id="spandex">
+        
+        <div class="radi" id="spandex">
             <div id='desc'>Do you wear spandex?</div>
-            <input id='rad' type='radio' name='spandex' value='yes' required oninvalid="this.setCustomValidity('Vital information, please answer')"
-            oninput="this.setCustomValidity('')">
-                <label for='rad'>Yes</label>
-            <input id='rad' type='radio' name='spandex' value='no' required>
-                <label for='rad'>No</label>
+            <label><input id='rad' type='radio' name='spandex' value='1' required
+            oninvalid="this.setCustomValidity('Please Select An Option')" oninput="this.setCustomValidity('')">Yes</label>
+            <label><input id='rad' type='radio' name='spandex' value='0'>No</label>
         </div>
+            
+            <!-- chose to implement it this way, because type="number" didn't give me the option to have a dropdown menu with the values-->
         <div class='powers'>
             <h4 id="hp">Powers [1 - 10]</h4>
             <div id='desc'>Strength:</div>
                 <select class='sel' name='strength' required>
                     <option id="dis" disabled selected value></option>
-                    <option value='1'>1</option>
-                    <option value='2'>2</option>   
-                    <option value='3'>3</option>   
-                    <option value='4'>4</option>   
-                    <option value='5'>5</option>   
-                    <option value='6'>6</option>   
-                    <option value='7'>7</option>   
-                    <option value='8'>8</option>   
-                    <option value='9'>9</option>  
-                    <option value='10'>10</option>
+                    <option value=1>1</option>
+                    <option value=2>2</option>   
+                    <option value=3>3</option>   
+                    <option value=4>4</option>   
+                    <option value=5>5</option>   
+                    <option value=6>6</option>   
+                    <option value=7>7</option>   
+                    <option value=8>8</option>   
+                    <option value=9>9</option>  
+                    <option value=10>10</option>
                 </select>
             <div id='desc'>Speed:</div>
                 <select class='sel' name='speed' required>
                     <option id="dis" disabled selected value></option>
-                    <option value='1'>1</option>
-                    <option value='2'>2</option>   
-                    <option value='3'>3</option>   
-                    <option value='4'>4</option>   
-                    <option value='5'>5</option>   
-                    <option value='6'>6</option>   
-                    <option value='7'>7</option>   
-                    <option value='8'>8</option>   
-                    <option value='9'>9</option>  
-                    <option value='10'>10</option>
+                    <option value=1>1</option>
+                    <option value=2>2</option>   
+                    <option value=3>3</option>   
+                    <option value=4>4</option>   
+                    <option value=5>5</option>   
+                    <option value=6>6</option>   
+                    <option value=7>7</option>   
+                    <option value=8>8</option>   
+                    <option value=9>9</option>  
+                    <option value=10>10</option>
                 </select>
             <div id='desc'>Intelligence:</div>
                 <select class='sel' name='intelligence' required>
                     <option id="dis" disabled selected value></option>
-                    <option value='1'>1</option>
-                    <option value='2'>2</option>   
-                    <option value='3'>3</option>   
-                    <option value='4'>4</option>   
-                    <option value='5'>5</option>   
-                    <option value='6'>6</option>   
-                    <option value='7'>7</option>   
-                    <option value='8'>8</option>   
-                    <option value='9'>9</option>  
-                    <option value='10'>10</option>
+                    <option value=1>1</option>
+                    <option value=2>2</option>   
+                    <option value=3>3</option>   
+                    <option value=4>4</option>   
+                    <option value=5>5</option>   
+                    <option value=6>6</option>   
+                    <option value=7>7</option>   
+                    <option value=8>8</option>   
+                    <option value=9>9</option>  
+                    <option value=10>10</option>
                 </select>
         </div>
+            
+            
+        <div class = 'tax'>
+            <div id='desc'>Tax Returns:</div>
+           
+            <label>Income:<input type='number' name='income' oninput="tax()" min=0 placeholder='Enter your income here' required oninvalid="this.setCustomValidity('Please Enter Your Income')" oninput="this.setCustomValidity('')"></label>
+           
+            <label>Wealth:<input type='number' name='wealth' oninput="tax()" min=0 placeholder='Enter our wealth here' required oninvalid="this.setCustomValidity('Please Enter Your Wealth')" oninput="this.setCustomValidity('')"></label>
+            
+            <label>Tax:<input id='return' type='number' name='taxes' oninput="tax()" placeholder='Your tax return' disabled></label>
+        </div>    
+           
+            
         <input class='sub' type='submit' value="Submit Tax Form">
+            
         </form>
     </body>
 </html>
